@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/food';
+const API_URL = 'https://food-vault-lp8m.onrender.com';
 
 
 const imageCache = {};
