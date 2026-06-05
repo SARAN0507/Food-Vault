@@ -8,11 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- ── NAVBAR ── -->
   <nav class="navbar">
     <div class="nav-logo">
-      <div class="logo-icon">🍽</div>
+      <div class="logo-icon"></div>
       <div>
         <div class="logo-title">FoodVault</div>
         <div class="logo-sub">Menu Management</div>
@@ -21,12 +19,12 @@
 
     <div class="nav-center">
       <span id="nav-home"   class="nav-tab active" onclick="showPage('home')">Dashboard</span>
-      <span id="nav-manage" class="nav-tab"        onclick="showPage('manage')">Manage Menu</span>
+      <span id="nav-manage" class="nav-tab" onclick="showPage('manage')">Manage Menu</span>
     </div>
 
     <div class="nav-right">
       <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
-        <span id="theme-icon">🌙</span>
+        <span id="theme-icon"></span>
         <div class="toggle-track">
           <div class="toggle-thumb" id="toggle-thumb"></div>
         </div>
@@ -36,9 +34,6 @@
 
   <div class="container">
 
-    <!-- ══════════════════════════════
-         HOME / DASHBOARD
-    ══════════════════════════════ -->
     <section id="home-page">
 
       <div class="hero-section">
@@ -69,9 +64,6 @@
 
     </section>
 
-    <!-- ══════════════════════════════
-         MANAGE / CRUD PAGE
-    ══════════════════════════════ -->
     <section id="manage-page" style="display:none;">
 
       <div class="page-header">
@@ -79,9 +71,8 @@
         <p class="page-sub">Add, edit or delete food items from your database.</p>
       </div>
 
-      <!-- ADD / EDIT FORM -->
       <div class="form-card">
-        <div class="form-card-title" id="form-title-label">➕ Add New Food Item</div>
+        <div class="form-card-title" id="form-title-label"> + Add New Food Item</div>
         <div class="form-row">
           <input type="hidden" id="editId" />
           <input type="text"   id="foodName"        class="input-field" placeholder="Food Name  (e.g. Masala Dosa)" />
@@ -92,14 +83,12 @@
         
       </div>
 
-      <!-- SEARCH -->
       <div class="search-bar-wrap">
         <input type="text" id="searchInput" class="search-bar"
-               placeholder="🔍  Search food items…" oninput="filterTable()" />
+               placeholder=" Search food items…" oninput="filterTable()" />
         <span class="item-count" id="item-count">0 items</span>
       </div>
 
-      <!-- TABLE -->
       <div class="table-card">
         <table>
           <thead>
@@ -120,7 +109,6 @@
     </section>
   </div>
 
-  <!-- TOAST -->
   <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
